@@ -1,3 +1,12 @@
+#News UI App
+ 
+
+The following steps are required to run this application on the local machine.
+•	Download or clone the Angular Web UI from the GitHub repository.
+•	Run the application.
+•	The default page will be displayed with the latest  news.
+•	The news can be filtered by using the search box.
+
 # NewsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
