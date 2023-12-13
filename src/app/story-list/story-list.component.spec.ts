@@ -41,7 +41,6 @@ describe('StoryListComponent', () => {
   });
 
   it('should initialize with default values', () => {
-    //component.totalItems = 0;
     expect(component.currentPage).toEqual(1);
     expect(component.itemsPerPage).toEqual(50);
     expect(component.totalItems).toEqual(0);
