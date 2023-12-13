@@ -45,7 +45,7 @@ describe('StoryListComponent', () => {
     expect(component.currentPage).toEqual(1);
     expect(component.itemsPerPage).toEqual(50);
     expect(component.totalItems).toEqual(0);
-    expect(component.tableSize).toEqual([5, 10, 15, 20]);
+    expect(component.tableSize).toEqual([50, 100, 150, 200]);
     expect(component.news).toEqual([]);
     expect(component.searchString).toEqual('');
     expect(component.pagingConfig).toEqual({
