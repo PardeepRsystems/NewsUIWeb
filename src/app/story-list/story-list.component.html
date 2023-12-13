@@ -13,11 +13,15 @@
        <tr *ngFor="let story of stories | searchNews: searchString | paginate: pagingConfig; let i = index">
          <td>{{story.id}}</td>
          <td>{{story.title}}</td>
-         <td> <a *ngIf="story.url" [href]="story.url" target="_blank">Read more</a></td>         
+         <td *ngIf="!isLoading"> <a *ngIf="story.url" [href]="story.url" target="_blank">Read more</a></td>         
        </tr>
  
      </tbody>
    </table> 
+   <div *ngIf="isLoading" class="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
    <div class="d-flex justify-content-center">
     <pagination-controls
     previousLabel="Prev"
@@ -25,5 +29,6 @@
     (pageChange)="onTableDataChange($event)">
     </pagination-controls>
   </div>
+
    <!-- <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls> -->
  </div>
