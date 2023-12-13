@@ -15,7 +15,7 @@ export class StoryListComponent implements OnInit, PagingConfig  {
   totalItems: number = 0;
   tableSize: number[] = [5, 10, 15, 20];
   news = new Array<News>();
-
+  isLoading = true;
   searchString = '';
 
   pagingConfig: PagingConfig = {} as PagingConfig;
@@ -36,6 +36,7 @@ export class StoryListComponent implements OnInit, PagingConfig  {
     .subscribe(res=> {
       this.stories = res;
       this.pagingConfig.totalItems = res.length;
+      isLoading = false;
     });
   }
 
