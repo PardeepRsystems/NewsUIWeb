@@ -13,7 +13,7 @@ export class StoryListComponent implements OnInit, PagingConfig  {
   currentPage:number  = 1;
   itemsPerPage: number = 50;
   totalItems: number = 0;
-  tableSize: number[] = [5, 10, 15, 20];
+  tableSize: number[] = [50, 100, 150, 200];
   news = new Array<News>();
   isLoading = true;
   searchString = '';
