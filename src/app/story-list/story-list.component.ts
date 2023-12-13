@@ -36,7 +36,7 @@ export class StoryListComponent implements OnInit, PagingConfig  {
     .subscribe(res=> {
       this.stories = res;
       this.pagingConfig.totalItems = res.length;
-      isLoading = false;
+      this.isLoading = false;
     });
   }
 
